@@ -14,15 +14,16 @@
 
             Calculadora calc = new Calculadora();
 
-            calc.areaParedes = 2 * (largura + profundidade) * altura;
-            Console.WriteLine(calc.areaParedes);
+            Console.WriteLine(calc.CalcularAreaParede(largura, profundidade, altura));
 
             Console.Write("A área do teto é: ");
-            calc.areaTeto = largura * profundidade;
-            Console.WriteLine(calc.areaTeto);
+
+            Console.WriteLine(calc.CalcularAreaTeto(largura, profundidade));
+
+
 
             Console.Write("A litragem de tinta necessária é : ");
-            Console.WriteLine($"{calc.areaParedes + calc.areaTeto / 10} litros");
+            Console.WriteLine($"{calc.CalcularLitragemNecessaria()} litros");
         }
     }
 }
