@@ -11,15 +11,18 @@
 
             Console.Write("A área das paredes é: ");
             const double altura = 2.9;
-            double areaParedes = 2 * (largura + profundidade) * altura;
-            Console.WriteLine(areaParedes);
+
+            Calculadora calc = new Calculadora();
+
+            calc.areaParedes = 2 * (largura + profundidade) * altura;
+            Console.WriteLine(calc.areaParedes);
 
             Console.Write("A área do teto é: ");
-            double areaTeto = largura * profundidade;
-            Console.WriteLine(areaTeto);
+            calc.areaTeto = largura * profundidade;
+            Console.WriteLine(calc.areaTeto);
 
             Console.Write("A litragem de tinta necessária é : ");
-            Console.WriteLine($"{areaParedes + areaTeto / 10} litros");
+            Console.WriteLine($"{calc.areaParedes + calc.areaTeto / 10} litros");
         }
     }
 }
