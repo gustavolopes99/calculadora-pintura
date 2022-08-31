@@ -10,10 +10,16 @@
             double profundidade = double.Parse(Console.ReadLine());
 
             Console.Write("A área das paredes é: ");
-            Console.WriteLine(2 * (largura + profundidade) * 2.9);
+            const double altura = 2.9;
+            double areaParedes = 2 * (largura + profundidade) * altura;
+            Console.WriteLine(areaParedes);
 
             Console.Write("A área do teto é: ");
-            Console.WriteLine(largura * profundidade);
+            double areaTeto = largura * profundidade;
+            Console.WriteLine(areaTeto);
+
+            Console.Write("A litragem de tinta necessária é : ");
+            Console.WriteLine($"{areaParedes + areaTeto / 10} litros");
         }
     }
 }
