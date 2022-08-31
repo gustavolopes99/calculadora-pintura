@@ -2,8 +2,8 @@ namespace CalculadoraPintura
 {
     public class Calculadora
     {
-        public double areaParedes { get; set; }
-        public double areaTeto { get; set; }
+        private double areaParedes { get; set; }
+        private double areaTeto { get; set; }
 
         public double CalcularAreaParede(double largura, double profundidade, double altura)
         {
